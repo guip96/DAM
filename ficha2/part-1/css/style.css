@@ -1,1 +1,13 @@
-body {background-color: red;}
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #000eee;
+}
+
+header {
+    background-color: #495867;
+}
+
+nav {
+    background-color: rgb(87, 115, 153);
+}
+
