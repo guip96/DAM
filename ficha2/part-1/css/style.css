@@ -1,13 +1,80 @@
 body {
     font-family: 'Roboto Mono', monospace;
-    background-color: #000eee;
+    background-color: #eee;
+    margin: 0;
 }
 
-header {
+header.title{
     background-color: #495867;
+    text-align: center;
+    padding: 30px;
+    color: white;
 }
 
 nav {
     background-color: rgb(87, 115, 153);
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
 }
+
+section {
+    min-width: 300px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, .1);
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+i.on {
+    color: #f8da4c;
+}
+
+i.off {
+    color: #4d719b;
+}
+table.history{
+    border-color: gray;
+}
+tr.history_hover:hover{
+    background-color: rgba(87,115,153,.5);
+}
+
+.container_nav{
+    display: flex;
+}
+.item_nav{
+    flex-grow: 1;
+    padding: 1em;
+    font-size: 1.3rem;
+    color: #444;
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+}
+.item_nav:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.item_nav:active{
+    color: white;
+}
+
+.container_body{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+.item_body{
+    order: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 300px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, .1);
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+}
+
+
+
+
+
+
+
 

@@ -1,77 +1,117 @@
 <!DOCTYPE html>
 
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Home Sweet Home</title>
-		<script src="https://kit.fontawesome.com/c6d2536bdd.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="./part-1/css/style.css" media="all"/>
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <title>Home Sweet Home</title>
+    <script src="https://kit.fontawesome.com/c6d2536bdd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./part-1/css/style.css" media="all"/>
+</head>
 
-	<body>
-	<div>
-		<header><h1>Home Sweet Home</h1></header>
-		<nav>
-			<ul>
-				<li><a href="index.html">Dashboard</a></li>
-				<li><a href="history.html">History</a></li>
-			</ul>
-		</nav>
- 	</div>
-
-	<div>
-		<h2>Kitchen</h2>
-
-		<p><span><i class="fas fa-thermometer-half"></i>
-			Temperature 21.6 ºC 5 minutes ago
-		</span></p>
-
-		<p><span><i class="far fa-lightbulb"></i>
-			Lights Off 10 minutes ago
-		</span></p>
-
-		<p><span><i class="fas fa-eye"></i>
-			West Window Open 15 minutes ago
-		</span></p>
-
-		<p><span><i class="fas fa-eye"></i>
-			North Window Open 15 minutes ago
-		</span></p>
+<body id="index">
+<header class="title">
+	<h1>Home Sweet Home</h1>
+</header>
+<nav>
+	<div class="container_nav">
+		<a href="index.html" class="item_nav">DASHBOARD</a>
+		<a href="history.html" class="item_nav">HISTORY</a>
 	</div>
+</nav>
 
-	<div>
-		<h2>Living Room</h2>
-		<p><span><i class="fas fa-thermometer-half"></i>
-			Temperature 22.6 ºC 5 minutes ago
-		</span></p>
+<div class="container_body">
+	<section class="item_body">
+		<header>
+			<h2>Kitchen</h2>
+		</header>
 
-		<p><span><i class="far fa-lightbulb"></i>
-			Ceiling Lights Off 7 minutes ago
-		</span></p>
+		<div>
+			<i class="fas fa-thermometer-half off"></i>
+			<span>Temperature</span>
+			<span>21.6 ºC</span>
+			<span>5 minutes ago</span>
 
-		<p><span><i class="fas fa-lightbulb"></i>
-			Ambient Lights On 7 minutes ago
-		</span></p>
+		</div>
 
-		<p><span><i class="fas fa-music"></i>
-			Ambient Music On 17 minutes ago
-		</span></p>
-	</div>
+		<div>
+			<i class="far fa-lightbulb off"></i>
+			<span>Lights</span>
+			<span> Off</span>
+			<span>10 minutes ago</span>
+		</div>
 
-	<div>
-		<h2>Clock</h2>
-		<p><span><i class="far fa-clock"></i>
-			Time 22:30
-		</span></p>
+		<div>
+			<i class="fas fa-eye off"></i>
+			<span>West Window</span>
+			<span>Open</span>
+			<span>15 minutes ago</span>
+		</div>
 
-		<p><span><i class="far fa-calendar-alt"></i>
-			Date 2018-09-18
-		</span></p>
+		<div>
+			<i class="fas fa-eye off"></i>
+			<span>North Window</span>
+			<span>Open</span>
+			<span>15 minutes ago</span>
+		</div>
+	</section>
 
-		<p><span><i class="far fa-sun"></i>
-			Sunrise / Sunset above horizon
-		</span></p>
-	</div>
-	
-	</body>
+	<section class="item_body">
+		<header>
+			<h2>Living Room</h2>
+		</header>
+
+		<div>
+			<i class="fas fa-thermometer-half off"></i>
+			<span>Temperature</span>
+			<span>22.6 ºC 5 </span>
+			<span>minutes ago</span>
+		</div>
+
+		<div>
+			<i class="far fa-lightbulb off"></i>
+			<span>Ceiling Lights</span>
+			<span>Off </span>
+			<span>7 minutes ago</span>
+		</div>
+
+		<div>
+			<i class="fas fa-lightbulb on"></i>
+			<span>Ambient Lights</span>
+			<span>On</span>
+			<span>7 minutes ago</span>
+		</div>
+
+		<div>
+			<i class="fas fa-music on"></i>
+			<span>Ambient Music</span>
+			<span>On</span>
+			<span>17 minutes ago</span>
+		</div>
+	</section>
+
+	<section class="item_body">
+		<header>
+			<h2>Clock</h2>
+		</header>
+
+		<div>
+			<i class="far fa-clock off"></i>
+			<span>Time </span>
+			<span>22:30 </span>
+		</div>
+
+		<div>
+			<i class="far fa-calendar-alt off"></i>
+			<span>Date </span>
+			<span>2018-09-18</span>
+		</div>
+
+		<div>
+			<i class="far fa-sun off"></i>
+			<span>Sunrise / Sunset</span>
+			<span>above horizon</span>
+		</div>
+	</section>
+</div>
+</body>
 </html>
