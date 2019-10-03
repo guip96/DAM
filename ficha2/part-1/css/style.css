@@ -4,11 +4,15 @@ body {
     margin: 0;
 }
 
-header.title{
+header.header_title {
     background-color: #495867;
     text-align: center;
-    padding: 30px;
+    padding: 10px;
     color: white;
+}
+
+header.header_box {
+    margin: 10px;
 }
 
 nav {
@@ -30,46 +34,108 @@ i.on {
 i.off {
     color: #4d719b;
 }
-table.history{
-    border-color: gray;
-}
-tr.history_hover:hover{
-    background-color: rgba(87,115,153,.5);
+
+div.table_div {
+    margin: 10px;
 }
 
-.container_nav{
+table.history {
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, .1);
+    text-align: left;
+    width: 100%;
+    background-color: white;
+    font-family: "Roboto Mono", monospace;
+}
+
+th {
+    padding: 10px;
+    border: 10px solid black;
+}
+
+td {
+    padding: 10px;
+}
+
+tr.history_hover:hover {
+    background-color: rgba(87, 115, 153, .5);
+}
+
+.container_nav {
     display: flex;
 }
-.item_nav{
+
+.item_nav {
     flex-grow: 1;
-    padding: 1em;
+    padding: 10px;
     font-size: 1.3rem;
     color: #444;
     text-decoration: none;
     font-family: "Roboto Mono", monospace;
 }
-.item_nav:hover{
+
+.item_nav:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
-.item_nav:active{
+
+.item_nav:active {
     color: white;
 }
 
-.container_body{
-    flex-direction: row;
+.container_body {
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     align-items: stretch;
+    align-content: space-between;
+    justify-content: flex-start;
 }
-.item_body{
-    order: 1;
-    flex-grow: 1;
+
+.item_body {
     flex-shrink: 1;
+    flex-basis: auto;
     min-width: 300px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, .1);
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    background-color: white;
+    margin: 10px;
+}
+
+.container_box {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.item_box {
+    order: 0;
+}
+
+.container_box_agenda {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin: 10px;
+    align-content: space-between;
+}
+
+p.box_paragraph {
+    margin-top: 0;
+    color: gray;
+    font-size: 0.8rem;
+}
+
+i.switch {
+    text-decoration: none;
+    color: #444444;
+}
+
+table.table_container {
+    display: flex;
+
 
 }
+
+
+
 
 
 
