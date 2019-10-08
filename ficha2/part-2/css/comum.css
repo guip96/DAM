@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto Mono', monospace;
     background-color: #eee;
     margin: 0;
+    padding: 0;
 }
 
 header.header_title {
@@ -12,7 +13,7 @@ header.header_title {
 }
 
 header.header_box {
-    margin: 10px;
+    margin: 20px;
 }
 
 nav {
@@ -134,8 +135,31 @@ i.switch {
 
 table.table_container {
     display: flex;
+}
 
+@media screen and (max-width: 100vh){
+    body{
+        overflow: scroll;
+    }
+    header.header_title{
+        display: none;
+    }
 
+    nav{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .container_body {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: stretch;
+        align-content: center;
+        justify-content: center;
+
+    }
 }
 
 
