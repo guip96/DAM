@@ -106,12 +106,20 @@ tr.history_hover:hover {
 
 .container_box {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     margin: 10px;
 }
 
 .item_box {
-    order: 0;
+    margin-left: auto;
+}
+
+.item_box_left{
+
+}
+
+.item_box_left_images{
+    min-width: 30px;
 }
 
 .container_box_agenda {
@@ -120,6 +128,12 @@ tr.history_hover:hover {
     justify-content: flex-start;
     margin: 10px;
     align-content: space-between;
+}
+
+.item_agenda{
+    min-width: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 p.box_paragraph {
