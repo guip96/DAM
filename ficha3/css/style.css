@@ -105,6 +105,12 @@ tr.history_hover:hover {
     margin: 10px;
 }
 
+.action-icon {
+    flex: none;
+    color: #444;
+}
+
+
 .container_box {
     display: flex;
     justify-content: start;
@@ -177,14 +183,4 @@ table.table_container {
 
     }
 }
-
-
-
-
-
-
-
-
-
-
 
