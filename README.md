@@ -7,3 +7,8 @@
 
 5th commit -> ficha 2 acabada, ficha 3 começada
 
+6th commit -> ficha 3 colapse windows done
+		   -> switches done
+
+
+

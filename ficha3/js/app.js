@@ -3,6 +3,7 @@ function modifyText(value) { //função do evento
     const container_box=document.getElementsByClassName("switch").item(switch_index).parentNode.parentNode.parentNode; //linha (container) onde está o switch e a imagem
     const button=document.getElementsByClassName("switch").item(switch_index); //switch clicado
     const image=container_box.childNodes.item(1).childNodes.item(1); //imagem da mesma linha do switch
+
     if (button.classList.contains("fa-toggle-off")){
         button.classList.remove("fa-toggle-off");
         button.classList.add("fa-toggle-on");
@@ -18,15 +19,49 @@ function modifyText(value) { //função do evento
         image.classList.add("far");
         image.style.color = '#4d719b';
     }
+
+}
+function colapse_box(value) {
+    const colapse_index=Array.from(colapses).indexOf(value.target);
+    const box = colapses.item(colapse_index).parentNode.parentNode.parentNode.parentNode.parentNode;
+    for (let k = 0; k < box.childNodes.length; k++) {
+        if (box.childNodes.item(k).className === "container_box" || box.childNodes.item(k).className === "container_box_agenda") {
+            if(box.childNodes.item(k).style.display === "flex")
+                box.childNodes.item(k).style.display = "none";
+            else{
+                box.childNodes.item(k).style.display = "flex";
+            }
+        }
+    }
+    console.log(colapses.item(colapse_index));
+    if(colapses.item(colapse_index).classList.contains("fa-caret-square-up")){
+        colapses.item(colapse_index).classList.remove("fa-caret-square-up");
+        colapses.item(colapse_index).classList.add("fa-caret-square-down");
+    }else{
+        colapses.item(colapse_index).classList.remove("fa-caret-square-down");
+        colapses.item(colapse_index).classList.add("fa-caret-square-up");
+    }
+
 }
 
 function load() {
     switches = document.getElementsByClassName("switch"); //vai buscar todos os switches
+    colapses = document.getElementsByClassName("button_colapse");
     for (let i=0; i<switches.length; i++){
-        switches.item(i).addEventListener("click",modifyText,false) //cria os eventos
+        switches.item(i).addEventListener("click",modifyText,false); //cria os eventos
+    }
+    for (let j=0; j<colapses.length; j++){
+        colapses.item(j).addEventListener("click",colapse_box,false);
     }
 }
+
 document.addEventListener("DOMContentLoaded", load, false);
+
+
+
+
+
+
 
 
 
@@ -36,7 +71,6 @@ document.addEventListener("DOMContentLoaded", load, false);
 // asd=my_switches_off.item(0).getElementsByClassName("item_box_left_images");
 // image=my_switches_on.childNodes.item(1).childNodes.item(1)
 // image.classList.remove('far')
-//
 // image.classList.add('fas')
 // asd.item(0).style.color = 'red'
 // // console.log(my_switches_off.item(0));
