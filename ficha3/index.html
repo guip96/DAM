@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+<head>
     <meta charset="UTF-8">
     <title>Home Sweet Home</title>
     <script src="https://kit.fontawesome.com/c6d2536bdd.js" crossorigin="anonymous"></script>
@@ -21,22 +22,19 @@
 </nav>
 
 <div class="container_body">
-    <section class="item_body">
+    <section class="item_body" id="kitchen">
         <header class="header_box">
-            <div>
-                <h2>Kitchen</h2>
-            </div>
-            <div>
-                <h2>
-                    <a class="action-icon" href="#"><i class="fas fa-caret-square-up button_colapse"></i></a>
-                </h2>
-            </div>
+            <h2>Kitchen</h2>
+            <h2>
+                <a class="action-icon" href="#"><i data-target="kitchen"
+                                                   class="fas fa-caret-square-up button_colapse"></i></a>
+            </h2>
         </header>
 
         <div class="container_box">
-			<div class="item_box_left_images">
-				<i class="fas fa-thermometer-half off"></i>
-			</div>
+            <div class="item_box_left_images">
+                <i class="fas fa-thermometer-half off"></i>
+            </div>
             <div class="item_box_left">
                 <span>Temperature</span>
                 <p class="box_paragraph"><span>5 minutes ago</span></p>
@@ -49,7 +47,7 @@
 
         <div class="container_box">
             <div class="item_box_left_images">
-                <i class="far fa-lightbulb off"></i>
+                <i class="far fa-lightbulb off switch_image"></i>
             </div>
             <div class="item_box_left">
                 <span>Lights</span>
@@ -87,16 +85,13 @@
         </div>
     </section>
 
-    <section class="item_body">
+    <section class="item_body" id="living_room">
         <header class="header_box">
-            <div>
-                <h2>Living Room</h2>
-            </div>
-            <div>
-                <h2>
-                    <a class="action-icon" href="#"><i class="fas fa-caret-square-up button_colapse"></i></a>
-                </h2>
-            </div>
+            <h2>Living Room</h2>
+            <h2>
+                <a class="action-icon" href="#"><i data-target="living_room"
+                                                   class="fas fa-caret-square-up button_colapse"></i></a>
+            </h2>
         </header>
 
         <div class="container_box">
@@ -114,7 +109,7 @@
 
         <div class="container_box">
             <div class="item_box_left_images">
-                <i class="far fa-lightbulb off"></i>
+                <i class="far fa-lightbulb off switch_image"></i>
             </div>
             <div class="item_box_left">
                 <span>Ceiling Lights</span>
@@ -127,7 +122,7 @@
 
         <div class="container_box">
             <div class="item_box_left_images">
-                <i class="fas fa-lightbulb on"></i>
+                <i class="fas fa-lightbulb on switch_image"></i>
             </div>
             <div class="item_box_left">
                 <span>Ambient Lights</span>
@@ -152,16 +147,13 @@
         </div>
     </section>
 
-    <section class="item_body">
+    <section class="item_body" id="basement">
         <header class="header_box">
-            <div>
-                <h2>Basement</h2>
-            </div>
-            <div>
-                <h2>
-                    <a class="action-icon" href="#"><i class="fas fa-caret-square-up button_colapse"></i></a>
-                </h2>
-            </div>
+            <h2>Basement</h2>
+            <h2>
+                <a class="action-icon" href="#"><i data-target="basement"
+                                                   class="fas fa-caret-square-up button_colapse"></i></a>
+            </h2>
         </header>
 
         <div class="container_box">
@@ -204,16 +196,13 @@
         </div>
     </section>
 
-    <section class="item_body">
+    <section class="item_body" id="weather">
         <header class="header_box">
-            <div>
-                <h2>Weather Station</h2>
-            </div>
-            <div>
-                <h2>
-                    <a class="action-icon" href="#"><i class="fas fa-caret-square-up button_colapse"></i></a>
-                </h2>
-            </div>
+            <h2>Weather Station</h2>
+            <h2>
+                <a class="action-icon" href="#"><i data-target="weather"
+                                                   class="fas fa-caret-square-up button_colapse"></i></a>
+            </h2>
         </header>
 
         <div class="container_box">
@@ -308,16 +297,13 @@
 
     </section>
 
-    <section class="item_body">
+    <section class="item_body" id="clock">
         <header class="header_box">
-            <div>
-                <h2>Clock</h2>
-            </div>
-            <div>
-                <h2>
-                    <a class="action-icon" href="#"><i class="fas fa-caret-square-up button_colapse"></i></a>
-                </h2>
-            </div>
+            <h2>Clock</h2>
+            <h2>
+                <a class="action-icon" href="#"><i data-target="clock"
+                                                   class="fas fa-caret-square-up button_colapse"></i></a>
+            </h2>
         </header>
 
         <div class="container_box">
@@ -325,10 +311,10 @@
                 <i class="far fa-clock off"></i>
             </div>
             <div class="item_box_left">
-                <span>Time </span>
+                <span>Time</span>
             </div>
-            <div class="item_box">
-                <span>22:30 </span>
+            <div id="hours" class="item_box">
+                <span>22:30</span>
             </div>
         </div>
 
@@ -337,24 +323,21 @@
                 <i class="far fa-calendar-alt off"></i>
             </div>
             <div class="item_box_left">
-                <span>Date </span>
+                <span>Date</span>
             </div>
-            <div class="item_box">
+            <div id="date" class="item_box">
                 <span>2018-09-18</span>
             </div>
         </div>
     </section>
 
-    <section class="item_body">
+    <section class="item_body" id="agenda">
         <header class="header_box">
-            <div>
-                <h2>Agenda for Tomorrow</h2>
-            </div>
-            <div>
-                <h2>
-                    <a class="action-icon" href="#"><i class="fas fa-caret-square-up button_colapse"></i></a>
-                </h2>
-            </div>
+            <h2>Agenda for Tomorrow</h2>
+            <h2>
+                <a class="action-icon" href="#"><i data-target="agenda"
+                                                   class="fas fa-caret-square-up button_colapse"></i></a>
+            </h2>
         </header>
 
         <div class="container_box_agenda">

@@ -119,6 +119,14 @@ tr.history_hover:hover {
     margin: 10px;
 }
 
+.colapsed .container_box{
+    display: none;
+}
+
+.colapsed .container_box_agenda{
+    display: none;
+}
+
 .item_box {
     margin-left: auto;
 }

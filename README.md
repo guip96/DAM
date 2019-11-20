@@ -11,4 +11,8 @@
 		   -> switches done
 
 
+7th commit -> ficha 4
+8th commit -> ficha 4 done
+
+
 

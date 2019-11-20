@@ -1,8 +1,8 @@
 function modifyText(value) { //função do evento
+    value.preventDefault();
     const switch_index=Array.from(switches).indexOf(value.target); //indice do switch
-    const container_box=document.getElementsByClassName("switch").item(switch_index).parentNode.parentNode.parentNode; //linha (container) onde está o switch e a imagem
-    const button=document.getElementsByClassName("switch").item(switch_index); //switch clicado
-    const image=container_box.childNodes.item(1).childNodes.item(1); //imagem da mesma linha do switch
+    const button=switches.item(switch_index);
+    const image=switch_images.item(switch_index);
 
     if (button.classList.contains("fa-toggle-off")){
         button.classList.remove("fa-toggle-off");
@@ -10,30 +10,26 @@ function modifyText(value) { //função do evento
 
         image.classList.add("fas");
         image.classList.remove("far");
-        image.style.color = '#f8da4c';
+        image.classList.toggle("on")
+        image.classList.toggle("off")
     }else{
         button.classList.remove("fa-toggle-on");
         button.classList.add("fa-toggle-off");
 
         image.classList.remove("fas");
         image.classList.add("far");
-        image.style.color = '#4d719b';
+        image.classList.toggle("off")
+        image.classList.toggle("on")
     }
 
 }
 function colapse_box(value) {
+    value.preventDefault();
     const colapse_index=Array.from(colapses).indexOf(value.target);
-    const box = colapses.item(colapse_index).parentNode.parentNode.parentNode.parentNode.parentNode;
-    for (let k = 0; k < box.childNodes.length; k++) {
-        if (box.childNodes.item(k).className === "container_box" || box.childNodes.item(k).className === "container_box_agenda") {
-            if(box.childNodes.item(k).style.display === "flex")
-                box.childNodes.item(k).style.display = "none";
-            else{
-                box.childNodes.item(k).style.display = "flex";
-            }
-        }
-    }
-    console.log(colapses.item(colapse_index));
+    // const box = colapses.item(colapse_index).parentNode.parentNode.parentNode.parentNode.parentNode;
+    // const box = document.getElementById(this.dataset.target)
+    // box.classList.toggle("colapsed");
+    document.getElementById(this.dataset.target).classList.toggle("colapsed")
     if(colapses.item(colapse_index).classList.contains("fa-caret-square-up")){
         colapses.item(colapse_index).classList.remove("fa-caret-square-up");
         colapses.item(colapse_index).classList.add("fa-caret-square-down");
@@ -43,9 +39,21 @@ function colapse_box(value) {
     }
 
 }
+function modifyhours() {
+  setInterval(function()
+      {
+          let date = new Date();
+          let hours = String(date.getHours()).padStart(2, '0');
+          let minutes = String(date.getMinutes()).padStart(2, '0');
+          let time = hours + ":" + minutes;
+          hour2write.childNodes.item(1).textContent = time;
+      }, 60000);
+}
 
 function load() {
+    modifyhours();
     switches = document.getElementsByClassName("switch"); //vai buscar todos os switches
+    switch_images = document.getElementsByClassName("switch_image");
     colapses = document.getElementsByClassName("button_colapse");
     for (let i=0; i<switches.length; i++){
         switches.item(i).addEventListener("click",modifyText,false); //cria os eventos
@@ -56,6 +64,25 @@ function load() {
 }
 
 document.addEventListener("DOMContentLoaded", load, false);
+
+let date = new Date();
+let dd = String(date.getDate()).padStart(2, '0');
+let mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
+let yyyy = date.getFullYear();
+
+today = dd + '/' + mm + '/' + yyyy;
+let hours = String(date.getHours()).padStart(2, '0');
+let minutes = String(date.getMinutes()).padStart(2, '0');
+
+let time = hours + ":" + minutes;
+data2write = document.getElementById("date");
+
+data2write.childNodes.item(1).textContent = today;
+hour2write = document.getElementById("hours");
+
+hour2write.childNodes.item(1).textContent = time;
+
+
 
 
 
