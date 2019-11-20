@@ -1,6 +1,8 @@
 # DAM FILES
 1st commit -> index
+
 2nd commit -> added history file
+
 3rd commit -> added icons
 
 4th commit -> finished part2, part3 to go
@@ -10,8 +12,8 @@
 6th commit -> ficha 3 colapse windows done
 		   -> switches done
 
-
 7th commit -> ficha 4
+
 8th commit -> ficha 4 done
 
 
